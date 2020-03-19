@@ -58,6 +58,10 @@ INSTALLED_APPS = [
 
     # Image Hosting
     'cloudinary',
+
+    # My Apps
+    'images',
+    'case_cards',
 ]
 
 MIDDLEWARE = [
