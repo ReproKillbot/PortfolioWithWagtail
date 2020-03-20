@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     # My Apps
     'images',
     'case_cards',
+    'base_pages',
 ]
 
 MIDDLEWARE = [

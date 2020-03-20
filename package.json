@@ -1,0 +1,22 @@
+{
+  "name": "wagtailtemplate",
+  "version": "1.0.0",
+  "description": "A few js packages for my portfolio site!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReproKillbot/PortfolioWithWagtail.git"
+  },
+  "author": "ReproKillbot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReproKillbot/PortfolioWithWagtail/issues"
+  },
+  "homepage": "https://github.com/ReproKillbot/PortfolioWithWagtail#readme",
+  "dependencies": {
+    "semantic-ui": "^2.4.2"
+  }
+}
