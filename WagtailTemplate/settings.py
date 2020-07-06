@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import cloudinary
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +25,7 @@ SECRET_KEY = 'z!j)&1!vhq39x4(9*0k^wkjf5&o5+m7!+8wqo11qok!cg1#iq3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -52,17 +51,16 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
+    "wagtail.contrib.table_block",
 
     'modelcluster',
     'taggit',
-
-    # Image Hosting
-    'cloudinary',
+    'generic_chooser',
 
     # My Apps
-    'images',
-    'case_cards',
     'base_pages',
+    'quests',
+    'npcs',
 ]
 
 MIDDLEWARE = [
@@ -143,24 +141,22 @@ USE_L10N = True
 
 USE_TZ = True
 
-##__##__##__##__#___##__##__##__##__#___STATIC FILES__#___##__##__##__##__#___##__##__##__##__#___
+# #__##__##__##__#___##__##__##__##__#___STATIC FILES__#___##__##__##__##__#___##__##__##__##__#___
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 WAGTAIL_SITE_NAME = 'Super Awesome'
-MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
-##__##__##__##__#___##__##__##__##__#___CLOUDINARY__#___##__##__##__##__#___##__##__##__##__#___
-CLOUDINARY_CLOUD_NAME = ""
-CLOUDINARY_API_KEY = ""
-CLOUDINARY_API_SECRET = ""
+# Access this by running tail -f /tmp/debug.log
+LOGGING = { 'version': 1, 'disable_existing_loggers': False, 'handlers': { 'file': { 'level': 'DEBUG', 'class': 'logging.FileHandler', 'filename': '/tmp/debug.log', }, }, 'loggers': { 'django': { 'handlers': ['file'], 'level': 'DEBUG', 'propagate': True, }, }, }
 
-cloudinary.config(
-    cloud_name=os.environ.get(CLOUDINARY_CLOUD_NAME),
-    api_key=os.environ.get(CLOUDINARY_API_KEY),
-    api_secret=os.environ.get(CLOUDINARY_API_SECRET)
-)
+WAGTAIL_APPEND_SLASH = False

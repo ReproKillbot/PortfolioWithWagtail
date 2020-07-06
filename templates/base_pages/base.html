@@ -1,8 +1,72 @@
-{% extends 'scripts.html' %}
-{% load wagtailcore_tags %}
-{% load wagtailimages_tags %}
-<head>
-    <title>{{ page.title }}</title>
-</head>
-{% block content %}
+{% load static %}
+{% block scripts %}
+    <head>
+
+        <!-- Title -->
+        <title>{{ page.title }}</title>
+
+        <!-- Meta Tags  -->
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+        <!-- Jquery, Semantic -->
+        <script
+                src="https://code.jquery.com/jquery-3.5.0.js"
+                integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+                crossorigin="anonymous"></script>
+                <link rel="stylesheet" type="text/css" href={% static "/semantic-ui/semantic.lux.min.css" %}>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href={% static "/ours/css/custom.css" %}>
+        <link rel="stylesheet" type="text/css" href={% static "/ours/css/tables.css" %}>
+        <link rel="stylesheet" type="text/css" href={% static "/ours/css/base_page.css" %}>
+        <link rel="stylesheet" type="text/css" href={% static "/ours/css/buttons_fonts_icons.css" %}>
+        <link rel="stylesheet" type="text/css" href={% static "/ours/css/navbar_footer.css" %}>
+        <link rel="stylesheet" type="text/css" href={% static "/ours/css/media_queries.css" %}>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- My JS -->
+        <script src={% static "/ours/js/onscroll.js" %}></script>
+        <script src={% static "/ours/js/navigate.js" %}></script>
+        <script src={% static "/ours/js/following-tooltip.js" %}></script>
+
+        <!-- TurnJS  -->
+        <script src={% static "/turn-js/hash.js" %}></script>
+        <script src={% static "/turn-js/scissor.js" %}></script>
+        <script src={% static "/turn-js/turn.html4.js" %}></script>
+        <script src={% static "/turn-js/turn.js" %}></script>
+        <script src={% static "/turn-js/zoom.js" %}></script>
+    </head>
+
 {% endblock %}
+{% block navbar %}
+    <body id="myBody">
+    <div class="big-screen-only" id="navbar">
+        <img class="navbar-logo" onclick="navigateTo('/')" src="{% static 'ours/images/dungeosplash.jpg' %}">
+        <button class="our-button all-blogs-button" onclick="navigateTo('/blogs/')">Blogs </button>
+        <button class="our-button contact-button" onclick="navigateTo('/contact/')">Contact </button>
+        <button class="our-button about-us-button" onclick="navigateTo('/about-us/')">About Us </button>
+    </div>
+
+    {% block content %}
+    {% endblock content %}
+
+    {% block footer %}
+        <div id="footer">
+            <!-- TODO: Menu for Mobile -->
+            <div class="github">
+                <img onclick="navigateTo('https://www.github.com/ReproKillbot')" src="{% static 'ours/images/social_media/github.png' %}">
+            </div>
+            <!-- TODO: Link to thingies -->
+            <div class="twitter" href="#">
+                <img onclick="navigateTo()" src="{% static 'ours/images/social_media/twitter.png' %}">
+            </div>
+            <div class="patreon" href="#">
+                <img onclick="navigateTo()" src="{% static 'ours/images/social_media/patreon.png' %}">
+            </div>
+        </div>
+    {% endblock footer %}
+    </body>
+{% endblock navbar %}
+
