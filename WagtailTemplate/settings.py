@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
 
-    'whitenoise.runserver_nostatic'
+    'whitenoise.runserver_nostatic',
 
     # Wagtail
     'wagtail.contrib.forms',
