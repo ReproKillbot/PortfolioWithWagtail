@@ -11,7 +11,6 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.snippets.models import register_snippet
 
 
-
 class NPC(Orderable):
     name = models.CharField(max_length=50)
     sub_title = models.CharField(max_length=60)
