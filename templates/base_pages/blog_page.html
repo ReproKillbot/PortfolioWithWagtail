@@ -1,7 +1,7 @@
 {% extends 'base_pages/base.html' %}
 {% load static %}
 {% load wagtailcore_tags %}
-
+{% load wagtailimages_tags %}
 {% block content %}
 
     <div id="content">
@@ -13,7 +13,6 @@
                 </section>
                 <div class="ui divider"></div>
             {% elif block.block_type == 'image' %}
-
                 <section class="block-{{ block.block_type }}">
                     {{block}}
                 </section>
