@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: "CustomBelwe";
-    src: url("http://localhost:8000/static/ours/fonts/Belwe\ Light\ BT.TTF");
+    src: url("https://dungeomancer.herokuapp.com/static/ours/fonts/Belwe\ Light\ BT.TTF");
 }
 
 @font-face {
     font-family: "CustomNocturno";
-    src: url("http://localhost:8000/static/ours/fonts/NOCTURNO\ TEXT\ PRO\ BOOK.OTF") format("opentype")
+    src: url("https://dungeomancer.herokuapp.com/static/ours/fonts/NOCTURNO\ TEXT\ PRO\ BOOK.OTF") format("opentype")
 }
 
 /* Buttons */
