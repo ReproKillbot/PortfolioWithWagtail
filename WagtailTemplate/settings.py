@@ -187,5 +187,5 @@ LOGGING = {
     },
 }
 
-WAGTAIL_APPEND_SLASH = False
+WAGTAIL_APPEND_SLASH = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
