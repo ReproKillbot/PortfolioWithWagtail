@@ -18,7 +18,7 @@
 
 .our-button{
     filter: drop-shadow(3px 3px 4px black);
-    transition: color .35s, filter .35s, background .35s, border .35s, top .2s, left .2s;
+    transition: color .35s, filter .35s, background .35s, border .35s, top .35s, left .35s;
     text-shadow: none;
     background: transparent;
     color: #dc8221;
@@ -31,11 +31,11 @@
 }
 
 .our-button:hover{
-    transition: color .35s, filter .35s, background .35s, border .35s, top .2s, left .2s;
+    transition: color .35s, filter .35s, background .35s, border .35s, top .35s, left .35s;
     filter: drop-shadow(1px 1px 1px black);
     color: black;
-    top: 5px;
-    left: 5px;
+    top: 4px;
+    left: 4px;
     background: #dc8221;
     border: 1px solid black;
 }
