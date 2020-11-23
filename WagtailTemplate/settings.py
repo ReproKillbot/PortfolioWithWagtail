@@ -31,7 +31,9 @@ ALLOWED_HOSTS = [
     '0.0.0.0',
     'localhost',
     '127.0.0.1',
-    'dungeomancer.herokuapp.com']
+    'dungeomancer.herokuapp.com',
+    'dungeomancer.com',
+]
 
 
 # Application definition
@@ -61,6 +63,7 @@ INSTALLED_APPS = [
     'wagtail.core',
     "wagtail.contrib.table_block",
 
+    # Extensions
     'modelcluster',
     'taggit',
     'generic_chooser',
@@ -79,6 +82,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
     'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -160,7 +164,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-WAGTAIL_SITE_NAME = 'Super Awesome'
+WAGTAIL_SITE_NAME = 'Dungeomancer'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
