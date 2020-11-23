@@ -1,0 +1,106 @@
+/* Fonts */
+
+@font-face {
+    font-family: "CustomBelwe";
+    src: url("https://www.dungeomancer.com/static/ours/fonts/Belwe\ Light\ BT.TTF");
+}
+
+@font-face {
+    font-family: "CustomNocturno";
+    src: url("https://www.dungeomancer.com/static/ours/fonts/NOCTURNO\ TEXT\ PRO\ BOOK.OTF") format("opentype")
+}
+
+/* Buttons */
+
+#navbar .our-button{
+    margin: 15% 5%;
+}
+
+.our-button{
+    transition: color .4s, background-color .4s, top .4s, left .4s;
+    box-shadow: 3px 3px 5px 2px #dc8221;
+    background: transparent;
+    color: #dc8221;
+    border: none;
+    padding: 1.5vh 3vw;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.our-button:hover{
+    box-shadow: none;
+    color: #4d4853;
+    top: 3px;
+    left: 3px;
+    background: #dc8221;
+    text-shadow: none;
+}
+
+.our-button:focus{
+    outline: none;
+}
+
+/* Scroll Bar */
+
+body ::-webkit-scrollbar{
+    width: 1.5vw !important;
+}
+
+body ::-webkit-scrollbar-track {
+    margin: 10px 0px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #4d4753, #000000 );
+}
+
+body ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right, rgba(207, 162, 252, 0.65), rgba(133, 155, 243, 0.65));
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(to right, rgba(207, 162, 252, 0.95), rgba(133, 155, 243, 0.95));
+}
+
+/* Scroll Tags */
+
+.scroll-tag{
+    flex-direction: row;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 0 10px 0 10px;
+}
+
+img.scroll-tag{
+    height: 10vh !important;
+    width: 10vw !important;
+    align-self: flex-end;
+    padding-bottom: 5px;
+    transform: rotate(1.5deg);
+    display: flex;
+}
+
+.tag-title{
+    width: 5%;
+    text-align: center;
+    margin-top:1% !important;
+}
+
+.tag-box{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+
+.tag-name-grid{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-rows: 4fr 4fr 2fr;
+    grid-template-columns: 3fr 6fr 1fr;
+    grid-template-areas:
+        ". . ."
+        ". tag-name ."
+        ". . ."
+}
