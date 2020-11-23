@@ -17,29 +17,27 @@
 }
 
 .our-button{
-    transition: color .4s, background-color .4s, top .4s, left .4s;
-    box-shadow: 3px 3px 5px 2px #dc8221;
+    filter: drop-shadow(3px 3px 4px black);
+    transition: color .35s, filter .35s, background .35s, border .35s, top .2s, left .2s;
+    text-shadow: none;
     background: transparent;
     color: #dc8221;
-    border: none;
-    padding: 1.5vh 3vw;
+    padding: 5px 30px;
     cursor: pointer;
     position: relative;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
+    border: 1px solid #dc8221;
 }
 
 .our-button:hover{
-    box-shadow: none;
-    color: #4d4853;
-    top: 3px;
-    left: 3px;
+    transition: color .35s, filter .35s, background .35s, border .35s, top .2s, left .2s;
+    filter: drop-shadow(1px 1px 1px black);
+    color: black;
+    top: 5px;
+    left: 5px;
     background: #dc8221;
-    text-shadow: none;
-}
-
-.our-button:focus{
-    outline: none;
+    border: 1px solid black;
 }
 
 /* Scroll Bar */

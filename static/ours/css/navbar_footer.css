@@ -1,16 +1,16 @@
 #myBody {
     display: grid;
     transition: all 3s;
-    grid-template-columns: 8.5fr 1.5fr;
-    grid-template-rows: 9.5fr .5fr;
+    grid-template-rows: 10% 85% 5%;
     grid-template-areas:
-            "page_content navbar"
-            "footer footer";
-    position:absolute;
-    top:0px;
-    right:0px;
-    bottom:0px;
-    left:0px;
+        "navbar"
+        "page_content"
+        "footer";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 #content {
@@ -72,26 +72,21 @@
 
 
 #navbar {
+
     grid-area: navbar;
-    margin: 10px 10px 5px 0;
     background-color: #4d4853 !important;
     border-radius: 2px;
     display: grid;
     width: 100%;
-    grid-gap: 2vh;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas:
-            "navbar-logo"
-            "all-blogs-button"
-            "contact-button"
-            "about-us-button";
+    height: 70px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: ". navbar-logo . . all-blogs-button contact-button about-us-button";
 }
 
 .navbar-logo {
     grid-area: navbar-logo;
     cursor: pointer;
-    object-fit: scale-down !important;
-    width: inherit;
+    width: 120px;
     border-radius: 2px;
     align-self: center;
 }
