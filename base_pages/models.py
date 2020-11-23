@@ -7,6 +7,7 @@ from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.contrib.routable_page.models import RoutablePageMixin
 from wagtail.contrib.table_block.blocks import TableBlock
 from wagtail.core import blocks
+from wagtail.core.blocks import ChooserBlock
 from wagtail.core.fields import RichTextField, StreamField
 from wagtail.core.models import Page, Orderable
 from wagtail.images.blocks import ImageChooserBlock
@@ -47,6 +48,8 @@ class BlogListingPage(RoutablePageMixin, Page):
             return context
         context = paginate_posts(request, context, all_posts)
         return context
+
+
 
 
 class BlogPage(Page):
