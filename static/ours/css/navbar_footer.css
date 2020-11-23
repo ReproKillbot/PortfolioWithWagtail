@@ -17,8 +17,7 @@
     grid-area: page_content;
     overflow-y: auto;
     transition: all .6s !important;
-    margin: 3vh 1vw !important;
-    padding: 0px 2%;
+    margin: 5px !important;
 }
 
 #content > div{
