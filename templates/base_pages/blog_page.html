@@ -13,7 +13,9 @@
                 <div class="ui divider"></div>
             {% elif block.block_type == 'image' %}
                 <section class="block-{{ block.block_type }}">
-                    {% image block.value max-400x400 alt['A furry creature']%}
+                    <div style="widtgh: 100%; display: flex; align-items: center; justify-content: center;">
+                        {% image block.value original %}
+                    </div>
                 </section>
                 <div class="ui divider"></div>
             {% elif block.block_type == 'small_table' %}
