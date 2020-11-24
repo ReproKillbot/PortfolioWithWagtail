@@ -1,7 +1,7 @@
 #myBody {
     display: grid;
     transition: all 3s;
-    grid-template-rows: 10% 85% 5%;
+    grid-template-rows: 70px calc(100% - 100px) 29px;
     grid-template-areas:
         "navbar"
         "page_content"
@@ -30,50 +30,49 @@
 
 #footer {
     grid-area: footer;
-    padding: 5px 0;
     background-color: #4d4853; !important;
-    display: grid;
     border-radius: 5px;
-    grid-template-columns: 10fr repeat(3, .5fr);
-    grid-template-areas: "phone-only github twitter patreon"
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .phone-only{
     grid-area: phone-only;
 }
 
-.github, .twitter, .patreon{
-    cursor: pointer;
-    height: 100%;
-    align-self: center;
-    justify-self: center;
+.my-social-media {
+    flex: 0 1 50%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.patreon img, .github img, .twitter img {
-    height: inherit;
-    object-fit: fill;
+#footer .my-social-media img {
+    height: 25px;
 }
 
-.patreon{
-    grid-area: patreon;
+.my-social-media > div {
+    margin: 0 20px;
 }
-
 
 .github{
-    grid-area: github;
     color: #6a0079;
 }
 
 .twitter{
-    grid-area: twitter;
     color: #5ea0ef;
+}
+
+#footer  h6 {
+    margin:0;
 }
 
 /* Navbar */
 
 
 #navbar {
-
     grid-area: navbar;
     background-color: #4d4853 !important;
     border-radius: 2px;

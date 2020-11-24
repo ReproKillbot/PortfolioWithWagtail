@@ -14,22 +14,22 @@
             <div class="our-segment">
                 <img class="blog-thumbnail" src="{% static "/ours/images/" %}{{ post.thumbnail }}">
                 <div class="blog-title">
-                    <h2 onclick="navigateTo('/blogs/{{ post.slug }}')" style="cursor: pointer;">{{ post.title }}</h2>
+                    <h2><a href="/blogs/{{ post.slug }}/" title="Click here to our blog: {{ post.title }}">{{ post.title }}</a></h2>
                 </div>
                 <div class="blog-preview">
                     {{ post.intro|richtext }}
                 </div>
                 <div class="blog-tags">
                         {% for tag in post.tags.all %}
-                        <div class="tag-box" onclick="navigateTo('{{ self.url }}?tag={{ tag.name }}')" title="Search for related blogs">
+                        <a class="tag-box" href="/blogs/?tag={{ tag.name }}" title="Search for related blogs">
                             <img class="scroll-tag" src="{% static '/ours/images/scroll.png' %}">
                             <div class="tag-name-grid">
                                 <p class="tag-name" >{{ tag.name }}</p>
                             </div>
-                        </div>
+                        </a>
                         {% endfor %}
                 </div>
-                <button class="our-button blog-button" onclick="navigateTo('/blogs/{{ post.slug }}')">Read More</button>
+                <button class="our-button blog-button" href="/blogs/{{ post.slug }}/">Read {{ post.title }}</button>
             </div>
 
         {% endfor %}

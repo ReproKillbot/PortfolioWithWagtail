@@ -57,12 +57,12 @@
         {% if page.tags.count %}
             <h1>Tags:</h1>
             {% for tag in page.tags.all %}
-                <div class="tag-box" onclick="navigateTo('{{ self.url }}?tag={{ tag.name }}')" title="Search for related blogs">
+                <a class="tag-box" href="/blogs/{{ self.url }}?tag={{ tag.name }}')" title="Search for related blogs">
                             <img class="scroll-tag" src="http://localhost:8000/static/ours/images/scroll.png">
                             <div class="tag-name-grid">
                                 <p class="tag-name" >{{ tag.name }}</p>
                             </div>
-                        </div>
+                        </a>
             {% endfor %}
         {% endif %}
     </div>

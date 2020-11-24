@@ -30,7 +30,6 @@
 
         <!-- My JS -->
         <script src={% static "/ours/js/onscroll.js" %}></script>
-        <script src={% static "/ours/js/navigate.js" %}></script>
         <script src={% static "/ours/js/following-tooltip.js" %}></script>
 
     </head>
@@ -40,9 +39,9 @@
     <body id="myBody">
     <div class="big-screen-only" id="navbar">
         <img class="navbar-logo" onclick="navigateTo('/')" src="{% static 'ours/images/dungeosplash.jpg' %}">
-        <button class="our-button all-blogs-button" onclick="navigateTo('/blogs/')">Blogs </button>
-        <button class="our-button contact-button" onclick="navigateTo('/contact/')">Contact </button>
-        <button class="our-button about-us-button" onclick="navigateTo('/about-us/')">About Us </button>
+        <button class="our-button all-blogs-button" href="/blogs/" title="Hover here to read this title attribute. Click here to read some blogs.">Blogs</button>
+        <button class="our-button contact-button" href="/contact/" title="Hover here to read more hilarious titles. Click here to email a nerd.">Contact</button>
+        <button class="our-button about-us-button" href="/about-us/" title="Hover here to get a virtual high-five. Click here to learn who gave it to you.">About Us</button>
     </div>
 
     {% block content %}
@@ -50,8 +49,21 @@
 
     {% block footer %}
         <div id="footer">
-            <div class="github">
-                <img onclick="navigateTo('https://www.github.com/ReproKillbot')" src="{% static 'ours/images/github.png' %}">
+                <div class="my-social-media">
+                    <h6>Chris:</h6>
+                    <div class="github">
+                        <a href="https://github.com/ReproKillbot" title="Click here to look at the websites code!"><img alt="Github's Logo"  src="{% static 'ours/images/github.png' %}"></a>
+                    </div>
+                </div>
+                <div class="my-social-media">
+                    <h6>Wade:</h6>
+                    <div>
+                        <a href="https://www.artstation.com/dragonlocke" rel="friend" title="Click here to see more of Wade's artistry on ArtStation"><img alt="ArtStation's Logo"  src="{% static 'ours/images/ArtStationLogo.png' %}"></a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/dragonlockeOG" rel="friend" title="Click here to see more of Wade's artistry on Twitter"><img alt="Twitter's Logo"  src="{% static 'ours/images/twitter.png' %}" height="25px"></a>
+                    </div>
+                </div>
             </div>
             <!-- TODO: Link to thingies -->
 {#            <div class="twitter" href="#">#}

@@ -15,7 +15,7 @@ context_menu = [
                 'redo',
                 '---------',
                 'copy',
-                'cut'
+                'cut',
                 '---------',
                 'alignment',
             ]
